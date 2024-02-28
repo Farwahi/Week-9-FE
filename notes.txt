@@ -1,0 +1,18 @@
+//1. create new state call allUsers
+//2. in useEffect in App.jsx fetch all users(google fetch in userEffect react)
+//3. set the state allUsers to data from backend
+//4. pass down allUsers to Usercontainer as props
+//5. mapuse.map to render users
+
+
+  // useEffect(() => {
+  //   if (document.cookie) {
+  //     console.log("useEffect cookie: ", document.cookie);
+  //     let token = getTokenFromCookie("jwt_token");
+  //     if (token === false) {
+  //       setUser({});
+  //     } else {
+  //       loginWithToken(token, setUser);
+  //     }
+  //   }
+  // }, []);
