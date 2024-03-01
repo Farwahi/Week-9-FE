@@ -1,18 +1,23 @@
-import React from 'react';
-import Login from'./Login';
+import React, { useState } from 'react';
+import Login from './Login';
 import Signup from './SignUp';
 
 const LogOrSign = () => {
-  // Add logic here to switch between login and signup forms
-  // For example, show Login by default and provide a link/button to switch to Signup
+  const [showLogin, setShowLogin] = useState(true); 
+
+  const handleSwitchForm = () => {
+    setShowLogin(!showLogin); 
+  };
   return (
     <div className="log-or-sign-container">
-      <Login />
-      {/* Add a link/button to switch to Signup */}
-      {/* You can also render Signup conditionally based on user interaction */}
-      <Signup />
+      {showLogin ? <Login /> : <Signup />}
+     
+      <button onClick={handleSwitchForm}>
+        {showLogin ? 'Switch to Sign Up' : 'Switch to Login'}
+      </button>
     </div>
   );
 };
 
 export default LogOrSign;
+
